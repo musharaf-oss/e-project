@@ -5,8 +5,8 @@ include("header.php");
 $selCat = "SELECT * FROM category";
 $catq = mysqli_query($conn, $selCat);
 
-$selBrand = "SELECT * FROM brand";
-$brandq = mysqli_query($conn, $selBrand);
+$selcourt = "SELECT * FROM court";
+$brandq = mysqli_query($conn, $selcourt);
 
 ?>
 
@@ -14,19 +14,19 @@ $brandq = mysqli_query($conn, $selBrand);
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Add Product</h6>
+                <h6 class="mb-4">enter your information</h6>
 
                 <form method="post" enctype="multipart/form-data">
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Product Name</label>
-                        <input type="text" name="product_name" class="form-control" id="exampleInputEmail1"
+                        <label for="exampleInputEmail1" class="form-label">firt Name</label>
+                        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Product Price</label>
-                        <input type="number" name="product_price" class="form-control" id="exampleInputEmail1"
+                        <label for="exampleInputEmail1" class="form-label">last_name</label>
+                        <input type="number" name="last_name" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
@@ -37,7 +37,7 @@ $brandq = mysqli_query($conn, $selBrand);
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Product Image</label>
+                        <label for="exampleInputEmail1" class="form-label">years of experience</label>
                         <input type="file" name="product_image" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>

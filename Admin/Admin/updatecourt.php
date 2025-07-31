@@ -4,7 +4,7 @@ include("header.php");
 
 $getId = $_GET["id"];
 
-$sel = "SELECT * FROM brand WHERE brand_id = '$getId'";
+$sel = "SELECT * FROM court WHERE court_id = '$getId'";
 $q = mysqli_query($conn, $sel);
 
 $fetch = mysqli_fetch_assoc($q);
@@ -15,17 +15,17 @@ $fetch = mysqli_fetch_assoc($q);
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Update Brand</h6>
+                <h6 class="mb-4">Update court</h6>
 
                 <form method="post">
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Brand Name</label>
-                        <input type="text" name="brand_name" value="<?php echo $fetch["brand_name"] ?>" class="form-control" id="exampleInputEmail1"
+                        <label for="exampleInputEmail1" class="form-label">court Name</label>
+                        <input type="text" name="court_name" value="<?php echo $fetch["court_name"] ?>" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
 
-                    <button name="submitBtn" type="submit" class="btn btn-primary">Update Brand</button>
+                    <button name="submitBtn" type="submit" class="btn btn-primary">Update court</button>
                 </form>
             </div>
         </div>
@@ -35,15 +35,15 @@ $fetch = mysqli_fetch_assoc($q);
 
 <?php 
 if(isset($_POST["submitBtn"])){
-   $bn = $_POST["brand_name"];
+   $bn = $_POST["court_name"];
 
-       $upd = "UPDATE brand SET brand_name = '$bn' WHERE brand_id = '$getId'";
+       $upd = "UPDATE court SET court_name = '$bn' WHERE court_id = '$getId'";
        $done = mysqli_query($conn, $upd);
 
        if($done){
         echo "<script>
         alert('Record Updated');
-        window.location.href='viewBrand.php';
+        window.location.href='viewcourt.php';
         </script>";
      }
 }

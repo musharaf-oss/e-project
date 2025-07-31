@@ -1,17 +1,3 @@
-<?php
-session_start();
-include("connection.php");
-if(isset($_SESSION["role"]) == null){
-    echo "<script>
-    window.location.href = '../signin.php';
-    </script>";
-}
-else if($_SESSION["role"] == 2){
-    echo "<script>
-    window.location.href = '../User/index.php';
-    </script>";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,10 +63,10 @@ else if($_SESSION["role"] == 2){
                     <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Product</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Registration</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="addProduct.php" class="dropdown-item">Add Product</a>
-                            <a href="viewProduct.php" class="dropdown-item">View Product</a>
+                            <a href="addProduct.php" class="dropdown-item">Add Registration</a>
+                            <a href="viewProduct.php" class="dropdown-item">View Registration</a>
                         </div>
                     </div>
 
@@ -93,10 +79,10 @@ else if($_SESSION["role"] == 2){
                     </div>
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Brand</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Court </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="addBrand.php" class="dropdown-item">Add Brand</a>
-                            <a href="viewBrand.php" class="dropdown-item">View Brand</a>
+                            <a href="addBrand.php" class="dropdown-item">Add court</a>
+                            <a href="viewBrand.php" class="dropdown-item">View court</a>
                         </div>
                     </div>
 

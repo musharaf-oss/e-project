@@ -3,13 +3,13 @@ include("connection.php");
 
 $getId = $_GET["id"];
 
-$del = "DELETE FROM brand WHERE brand_id = '$getId'";
+$del = "DELETE FROM court WHERE court_id = '$getId'";
 $done = mysqli_query($conn, $del);
 
 if($done){
     echo "<script>
     alert('Record Deleted');
-    window.location.href='viewBrand.php';
+    window.location.href='viewcourt.php';
     </script>";
  }
 ?>
