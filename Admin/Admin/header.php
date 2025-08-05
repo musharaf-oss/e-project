@@ -31,7 +31,48 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<style>
+     .input-wrapper {
+      position: relative;
+    }
 
+    .input-wrapper i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    input[type="date"] {
+      width: 100%;
+      padding: 10px 12px 10px 38px;
+      font-size: 0.95rem;
+      border: 1.6px solid #d1d5db;
+      border-radius: 10px;
+      background-color: #f9fafb;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    input[type="date"]:hover {
+      background-color: #f3f4f6;
+      border-color: #a5b4fc;
+    }
+
+    input[type="date"]:focus {
+      border-color: #6366f1;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(40%);
+      cursor: pointer;
+    }
+</style>
 <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
         <!-- Spinner Start -->
@@ -47,7 +88,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                    <h3 class="text-dark"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -81,11 +122,17 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Court </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="addBrand.php" class="dropdown-item">Add court</a>
-                            <a href="viewBrand.php" class="dropdown-item">View court</a>
+                            <a href="addcourt.php" class="dropdown-item">Add court</a>
+                            <a href="viewcourt.php" class="dropdown-item">View court</a>
                         </div>
                     </div>
-
+  <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>degree </a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="adddegree.php" class="dropdown-item">Add degree</a>
+                            <a href="viewdegree.php" class="dropdown-item">View degree</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Role</a>
                         <div class="dropdown-menu bg-transparent border-0">
