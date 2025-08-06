@@ -35,8 +35,8 @@ $q = mysqli_query($conn, $sel);
             <td> <?php echo $fetch["brand_name"] ?> </td>
             <td> <img src="image/<?php echo $fetch["product_image"] ?>" alt="" width="100px"> </td>
             <td>
-                <a class="btn btn-warning" href="updateProduct.php?id=<?php echo $fetch["product_id"] ?>">Edit</a>
-                <a class="btn btn-danger" href="deleteProduct.php?id=<?php echo $fetch["product_id"] ?>">Delete</a>
+                <a class="btn btn-warning" href="updatelawyer.php?id=<?php echo $fetch["product_id"] ?>">Edit</a>
+                <a class="btn btn-danger" href="deletelawyer.php?id=<?php echo $fetch["product_id"] ?>">Delete</a>
             </td>
         </tr>
       <?php  } ?>

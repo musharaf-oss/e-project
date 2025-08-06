@@ -17,22 +17,15 @@ $degreeq = mysqli_query($conn, $seldeg);
     <div class="row g-4">
         <div class="col-sm-12 col-xl-12">
             <div class="bg-light rounded h-100 p-4">
-                <h6 class="mb-4">Enter Your Information</h6>
+                <h6 class="mb-4">SIGN UP AS LAWYER</h6>
 
                 <form method="post" enctype="multipart/form-data">
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">first_Name</label>
-                        <input type="text" name="first_name" class="form-control" id="exampleInputEmail1"
+                        <label for="exampleInputEmail1" class="form-label">full_Name</label>
+                        <input type="text" name="full_Name" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">last_name</label>
-                        <input type="text" name="last_name" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                    </div>
-
                      <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">father_name</label>
                         <input type="text" name="father_name" class="form-control" id="exampleInputEmail1"
@@ -71,7 +64,7 @@ $degreeq = mysqli_query($conn, $seldeg);
                     </div>
                   <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">CNIC No</label>
-                        <input type="text" name="CNIC" class="form-control" id="exampleInputEmail1" placeholder='xxxxx-xxxxxxx-x'
+                        <input type="number" name="CNIC" class="form-control" id="exampleInputEmail1" placeholder='xxxxx-xxxxxxx-x'
                             aria-describedby="emailHelp">
                     </div>
                      <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
@@ -79,89 +72,38 @@ $degreeq = mysqli_query($conn, $seldeg);
                       <i class="fas fa-calendar-alt"></i>
                   <input type="date" id="dob" name="dob" required >
                 </div><br>
-                 <div class="mb-3">
-     <label for="exampleInputEmail1" class="form-label">Select Your Gender  *</label>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                               Male
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Female
-                                            </label>
-                                            </div>
-                              <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Transgender
-                                            </label>
-                                            </div>
-  </div>
+<label class="form-label">Select Your Gender *</label>
+<div class="col-sm-10">
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="Male" checked>
+        <label class="form-check-label" for="genderMale">Male</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="Female">
+        <label class="form-check-label" for="genderFemale">Female</label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" id="genderTrans" value="Transgender">
+        <label class="form-check-label" for="genderTrans">Transgender</label>
+    </div>
+</div>
+
 <br>
-                 <div class="mb-3">
-     <label for="exampleInputEmail1" class="form-label">Martial Status  *</label>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="gridRadios1">
-                                              Single
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Married
-                                            </label>
-                                            </div>
-                              <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Transgender
-                                            </label>
-                                            </div>
-
-                            <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Divorced
-                                            </label>
-                                            </div>
-
-
-                                                <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios"
-                                                id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
-                                                Widowed
-                                            </label>
-                                            </div>
-</div><br>
       <div class="mb-3">
   <label for="phone" class="form-label">Phone Number</label>
   <input type="text"  name="phone"  class="form-control"  id="phone"  placeholder="xxxxxxxxxxx"  maxlength="11"  pattern="\d{11}"  required  oninput="this.value = this.value.replace(/\D/g, '')" >
 </div>
  
 <div class="mb-3">
-  <label for="phone" class="form-label">Watsapp Number</label>
-  <input type="text"  name="phone"  class="form-control"  id="phone"  placeholder="xxxxxxxxxxx"  maxlength="11"  pattern="\d{11}"  required  oninput="this.value = this.value.replace(/\D/g, '')" >
+  <label for="phone" class="form-label">Whatsapp Number</label>
+  <input type="text"  name="Whatsapp"  class="form-control"  id="phone"  placeholder="xxxxxxxxxxx"  maxlength="11"  pattern="\d{11}"  required  oninput="this.value = this.value.replace(/\D/g, '')" >
 </div>
 
 
 
   <h6 class="mb-4">Qualifications</h6>
 <label for="degree" class="form-label">Select Degrees You Hold</label>
-   <select name="d_id" class="form-select mb-3" aria-label="Default select example">
+   <select name="degree" class="form-select mb-3" aria-label="Default select example">
                         <option disabled selected>Select degree</option>
                         <?php while($fetdeg = mysqli_fetch_assoc($degreeq)){ ?>
                         <option value="<?php echo $fetdeg["degree_id"] ?>"><?php echo $fetdeg["degree_name"] ?></option>
@@ -194,22 +136,34 @@ $degreeq = mysqli_query($conn, $seldeg);
 </div>
 
 <label for="Type" class="form-label">Enrolment Type</label>
-                    <select name="b_id" class="form-select mb-3" aria-label="Default select example">
+                    <select name="c_id" class="form-select mb-3" aria-label="Default select example">
                         <option disabled selected>Select court</option>
                         <?php while($fetcourt = mysqli_fetch_assoc($courtq)){ ?>
                         <option value="1"><?php echo $fetcourt["court_name"] ?></option>
                         <?php } ?>
                     </select>
+<div class="mb-3">
+  <label for="Enrolment" class="form-label">Bar License Number</label>
+  <input  type="text"  name="License"  class="form-control"  id="Enrolment"  maxlength="7" pattern="\d{7}" required  oninput="this.value = this.value.replace(/\D/g, '').slice(0,7);" />
+</div>
 
+  <div class="mb-3">
+                                <label for="formFile" class="form-label">Upload Front Picture of Bar License</label>
+                                <input class="form-control" type="file" id="formFile" name='licence_image' >
+                            </div>
 <label for="Expertise" class="form-label">Select Expertise</label>
-                    <select name="c_id" class="form-select mb-3" aria-label="Default select example">
+                    <select name="e_id" class="form-select mb-3" aria-label="Default select example">
                         <option disabled selected>Select Category</option>
                         <?php while($fetCat = mysqli_fetch_assoc($catq)){ ?>
                         <option value="<?php echo $fetCat["category_id"] ?>"><?php echo $fetCat["category_name"] ?></option>
                         <?php } ?>
                     </select>
-
-                <button name="submitBtn" type="submit" class="btn btn-primary">Add Product</button>
+                             <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Address of Your Office</label>
+                        <input type="text" name="Address" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                <button name="submitBtn" type="submit" class="btn btn-primary">Register</button>
                 </form>
             
             </div>
@@ -219,12 +173,25 @@ $degreeq = mysqli_query($conn, $seldeg);
 
 <?php 
 if(isset($_POST["submitBtn"])){
-   $pn = $_POST["product_name"];
-   $pp = $_POST["product_price"];
-   $pd = $_POST["product_desc"];
-   $cid = $_POST["c_id"];
-   $bid = $_POST["b_id"];
-   $pi = $_FILES["product_image"]; //Image data comes in form of Array
+   $fn = $_POST["full_Name"];
+   $ftn = $_POST["father_name"];
+   $un = $_POST["user_name"];
+ $email = $_POST["email"];
+ $pass = $_POST["password"];
+ $house = $_POST["House"];
+ $cn = $_POST["CNIC"];
+ $dob = $_POST["dob"];
+ $gender = $_POST["gender"];
+    $phone = $_POST["phone"];
+    $Whatsapp = $_POST["Whatsapp"];
+    $Enrolment = $_POST["Enrolment"];
+    $cid = $_POST["c_id"];
+    $license = $_POST["License"];
+    $address = $_POST["Address"];
+  
+
+   $eid = $_POST["e_id"];
+   $pi = $_FILES["profile_image"]; //Image data comes in form of Array
 
 $img_name = $pi["name"];
 $img_tmp = $pi["tmp_name"];
@@ -233,16 +200,25 @@ $img_size = $pi["size"];
 
 $img_path = "image/" . $img_name;
 
+   $li = $_FILES["licence_image"]; //Image data comes in form of Array
+
+   $img_name = $li["name"];
+   $img_tmp = $li["tmp_name"];
+$img_type = $li["type"];
+$img_size = $li["size"];
+
+$img_path = "image/" . $img_name;
+
 $moved = move_uploaded_file($img_tmp, $img_path);
 
 if($moved){
-    $ins = "INSERT INTO products(product_name, product_price, product_description, product_image, category_id, brand_id) VALUES ('$pn', '$pp', '$pd', '$img_name', '$cid', '$bid')";
+    $ins = "INSERT INTO lawyers(full_Name, product_price, product_description, product_image, category_id, brand_id) VALUES ('$fn', '$pp', '$pd', '$img_name', '$cid', '$bid')";
     $done = mysqli_query($conn, $ins);
 
        if($done){
       echo "<script>
       alert('Record Inserted');
-      window.location.href='viewProduct.php';
+      window.location.href='viewlawyer.php';
       </script>";
    }
 }
