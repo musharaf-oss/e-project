@@ -2,11 +2,12 @@
 include("connection.php");
 include("header.php");
 
-$sel = "SELECT products.*, category.category_name, brand.brand_name FROM products
-INNER JOIN category
-ON products.category_id = category.category_id
-INNER JOIN brand
-ON products.brand_id = brand.brand_id";
+$sel = "SELECT lawyers.*, category.category_name, court.court_name, degree.degree_name 
+        FROM lawyers
+        INNER JOIN category ON lawyers.category_id = category.category_id
+        INNER JOIN court ON lawyers.court_id = court.court_id
+        INNER JOIN degree ON lawyers.degree_id = degree.degree_id";
+
 $q = mysqli_query($conn, $sel);
 ?>
 
